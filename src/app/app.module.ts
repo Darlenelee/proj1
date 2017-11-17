@@ -5,30 +5,21 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {AuthService} from './core/auth.service';
-import {RouterModule} from '@angular/router';
+import { AuthService } from './core/auth.service';
+import { routing } from './app.routes';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: 'login',
-        pathMatch: 'full'
-      },
-      {
-        path: 'login',
-        component: LoginComponent
-      }
-
-    ])
+    routing
   ],
   providers: [
     {provide: 'auth', useClass: AuthService }
