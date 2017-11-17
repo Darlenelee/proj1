@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {AuthService} from './core/auth.service';
-
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,19 @@ import {AuthService} from './core/auth.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full'
+      },
+      {
+        path: 'login',
+        component: LoginComponent
+      }
+
+    ])
   ],
   providers: [
     {provide: 'auth', useClass: AuthService }
