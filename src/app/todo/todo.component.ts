@@ -10,13 +10,47 @@ import { TodoService } from './todo.service';
 })
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
-  desc: string = '';
-  constructor(private service:TodoService) { }
+  desc: '';
+  constructor(private service: TodoService) { }
 
   ngOnInit() {
+    this.getTodos();
   }
-  addTodo(){
-    this.todos = this.service.addTodo(this.desc);
-    this.desc = '';
+  getTodos(): void {
+    this.service
+      .getTodos()
+      .then(todos => this.todos = [...todos]);
+  }
+  addTodo() {
+    this.service
+      .addTodo(this.desc)
+      .then(todo => {
+        this.todos = [...this.todos, todo];
+        this.desc = '';
+      });
+  }
+
+  toggleTodo(todo: Todo) {
+    const i = this.todos.indexOf(todo);
+    this.service
+      .toggleTodo(todo)
+      .then(t => {
+        this.todos = [
+          ...this.todos.slice(0, i),
+          t,
+          ...this.todos.slice(i + 1)
+        ];
+      });
+  }
+  removeTodo(todo: Todo){
+    const i = this.todos.indexOf(todo);
+    this.service
+      .deleteTodoById(todo.id)
+      .then(() => {
+        this.todos = [
+          ...this.todos.slice(0, i),
+          ...this.todos.slice(i + 1)
+        ];
+      });
   }
 }
