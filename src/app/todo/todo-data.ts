@@ -3,10 +3,10 @@ import { Todo } from './todo.model';
 
 export class InMemoryTodoDbService implements InMemoryDbService {
   createDb() {
-    const todos: Todo[] = [
-      {id: '67c16601-1e7b-bb7f-2791-0ff6322d740f', desc: 'Getting up', completed: true},
-      {id: '7fa6b4af-d55f-2b94-3620-fcdb0ff338be', desc: 'Go to school', completed: false}
+    let todos: Todo[] = [
+      {id: 'f823b191-7799-438d-8d78-fcb1e468fc78', desc: 'Getting up', completed: true},
+      {id: 'c316a3bf-b053-71f9-18a3-0073c7ee3b76', desc: 'Go to school', completed: false}
     ];
-    return {todos};  // equals to return {todos: todos}
+    return {todos};
   }
 }
