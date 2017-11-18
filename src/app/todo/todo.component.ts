@@ -53,4 +53,7 @@ export class TodoComponent implements OnInit {
         ];
       });
   }
+  onTextChanges(value) {
+    this.desc = value;
+  }
 }
