@@ -7,7 +7,7 @@ export class TodoService {
   todos: Todo[] = [];
   constructor() { }
   addTodo(todoItem: string): Todo[] {
-    let todo = {
+    const todo = {
       id: UUID.UUID(),
       desc: todoItem,
       completed: false

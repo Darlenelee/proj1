@@ -10,12 +10,12 @@ import { TodoService } from './todo.service';
 })
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
-  desc: string = '';
-  constructor(private service:TodoService) { }
+  desc: '';
+  constructor(private service: TodoService) { }
 
   ngOnInit() {
   }
-  addTodo(){
+  addTodo() {
     this.todos = this.service.addTodo(this.desc);
     this.desc = '';
   }
