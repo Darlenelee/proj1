@@ -1,5 +1,5 @@
 {
-  "todos":[
+  "todos": [
     {
       "id": "f823b191-7799-438d-8d78-fcb1e468fc78",
       "desc": "Getting up",
@@ -8,6 +8,40 @@
     {
       "id": "c316a3bf-b053-71f9-18a3-0073c7ee3b76",
       "desc": "Go to school",
+      "completed": true
+    },
+    {
+      "id": "2c5656c6-be4f-36aa-dc8a-d33f4bc0e82a",
+      "desc": "",
+      "completed": true
+    },
+    {
+      "id": "fe0e0b19-0e75-0732-6f7d-1623436a5141",
+      "desc": "",
+      "completed": true
+    },
+    {
+      "id": "a236475f-162f-9cba-68dd-0d3218766b4e",
+      "completed": true
+    },
+    {
+      "id": "aad90810-4695-a581-80ef-7beadc4d5560",
+      "desc": "sffFsdfszdgfdszfszfafsdadfafafadfa",
+      "completed": true
+    },
+    {
+      "id": "db1b64bc-25a7-39ab-9499-0326c0b93140",
+      "desc": "zfs",
+      "completed": true
+    },
+    {
+      "id": "0ac8ee1d-f9a0-187b-d915-77972cd60140",
+      "desc": "adsa",
+      "completed": false
+    },
+    {
+      "id": "a9860e99-cdca-e666-dec4-394220744192",
+      "desc": "gfxdf",
       "completed": false
     }
   ]

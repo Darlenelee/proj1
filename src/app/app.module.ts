@@ -3,23 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-
+import { TodoModule } from './todo/todo.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './core/auth.service';
 import { routing } from './app.routes';
-import { TodoComponent } from './todo/todo.component';
-import { TodoFooterComponent } from './todo/todo-footer/todo-footer.component';
-import { TodoHeaderComponent } from './todo/todo-header/todo-header.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    TodoComponent,
-    TodoFooterComponent,
-    TodoHeaderComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -33,4 +28,4 @@ import { TodoHeaderComponent } from './todo/todo-header/todo-header.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { }  // 根模块

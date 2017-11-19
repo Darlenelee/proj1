@@ -9,7 +9,7 @@ import { Todo } from './todo.model';
 @Injectable()
 export class TodoService {
 
-  private api_url = 'http://localhost:2200/todos';
+  private api_url = 'http://localhost:3000/todos';
   private headers = new Headers({'Content-Type': 'application/json'});
   constructor(private http: Http) { }
   // POST /todos

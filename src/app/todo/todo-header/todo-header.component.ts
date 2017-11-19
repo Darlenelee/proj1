@@ -20,7 +20,7 @@ export class TodoHeaderComponent {
   @Output() textChanges = new EventEmitter<string>();
   @Output() onEnterUp = new EventEmitter<boolean>();
 
-  // 响应式对象：利用observable观察html中的keyup事件，然后在事件流中做一个转换，map-发射输入框的值，时间滤波器，最后用一个筛选器
+  // ？？响应式对象：利用observable观察html中的keyup事件，然后在事件流中做一个转换，map-发射输入框的值，时间滤波器，最后用一个筛选器
   constructor(private elementRef: ElementRef) {
     const event$ = Observable.fromEvent(elementRef.nativeElement, 'keyup')
       .map(() => this.inputValue)
