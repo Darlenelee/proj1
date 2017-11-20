@@ -1,5 +1,12 @@
 # Proj1
+This project is inspired by a book called Angular from 0 to 1
+The app is aimed to provide a list of to-dos according to the instructions of the tutorial
+I still can not understand part of the code in the book to complete certain functions
+I didn't make it to write tests to automatically test the app
 
+
+
+-------------------------------
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
 ## Development server
