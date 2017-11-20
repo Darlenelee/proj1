@@ -30,3 +30,22 @@ const context = require.context('./', true, /\.spec\.ts$/);
 context.keys().map(context);
 // Finally, start Karma to run the tests.
 __karma__.start();
+
+describe('addTodo', function() {
+  it('should add new todo', function() {
+    const value = '1';
+    expect(value).toContain(true);
+  });
+});
+describe('toggleTodo', function() {
+  it('should tick', function() {
+    const value = '1';
+    expect(value).toContain(true);
+  });
+});
+describe('deleteTodo', function() {
+  it('should del a todo', function() {
+    const value = '1';
+    expect(value).toContain(true);
+  });
+});
